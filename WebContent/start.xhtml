@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+	
+
+<h:head>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</h:head>
+
+<h:body><div id="page"><br />
+	<div id="up">
+	Links
+	</div><p />
+
+
+
+
+	<div id="main">
+	<h:outputLabel styleClass="outputLabel">go to:</h:outputLabel>	<p />
+	<h:outputLink value="#{request.contextPath}/start.xhtml">add link</h:outputLink><p />
+	<h:outputLink value="#{request.contextPath}/links.xhtml">show links</h:outputLink><p />
+	
+	</div>
+	
+	<div id="content">
+	
+	<h:form>
+		<table>
+		<tr><td>Add your link here</td></tr>
+		<tr>
+		<td>
+		<h:outputLabel>link:</h:outputLabel>
+		</td>
+		<td>
+		<h:inputText value="#{dataTable.link}"></h:inputText>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<h:outputLabel>autor:</h:outputLabel>
+		</td>
+		<td>
+		<h:inputText value="#{dataTable.autor}"></h:inputText>
+		</td>
+		</tr>
+		<tr>
+		<td   valign="top">
+		<h:outputLabel>opis:</h:outputLabel>
+		</td>
+		<td>
+		<h:inputTextarea cols="30" rows="10" value="#{dataTable.tekst}" style="resize: none"/>
+		</td>
+		</tr>
+		<tr><td></td><td>
+		<h:commandButton value="Submit" action="#{dataTable.addLink}" type="submit"><br />
+    	</h:commandButton>
+    	</td>
+		</tr>
+		</table>
+		
+	</h:form><p />
+	
+	<h:outputLabel>#{dataTable.autor}</h:outputLabel><p />
+	<h:outputLabel>#{dataTable.info}</h:outputLabel>	
+	
+	
+	
+	</div>
+	
+	
+	</div>
+</h:body>
+
+
+</html>

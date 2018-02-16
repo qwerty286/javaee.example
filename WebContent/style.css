@@ -1,0 +1,59 @@
+#page {
+	height: 900px;
+	width: 950px;
+	background-image: url("img/backgg.jpg");
+	background-repeat: repeat;
+	margin: 0 auto;
+ 	left: 0;
+    right: 0;
+}
+
+
+
+#up {
+	height:100px;
+	text-align: center;
+	font:arial;
+	font-size:46px;
+	color: silver;
+	width: 920px;
+	background-color: #DCDCDC;
+	margin: 0 auto;
+
+ 	left: 0;
+    right: 0;
+	
+	
+}
+
+
+#main {
+	margin-left:15px;
+	padding: 5px;
+	font:arial;
+	font-size:16px;
+	color: black;
+	width: 190px;
+	background-color: #DCDCDC;
+	float:left;
+	
+}
+
+#content {
+	padding-left:4px;
+	padding-top:4px;
+	background-color: #DCDCDC;
+	margin-left:235px;
+	width: 695px;
+	height:700px;
+	text-padding:top;
+	
+	
+}
+
+
+
+.outputLabel {
+	font-size:22px;
+	
+}
