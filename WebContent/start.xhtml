@@ -8,6 +8,7 @@
 	
 
 <h:head>
+<title>Links</title>
 <link rel="stylesheet" type="text/css" href="style.css" />
 </h:head>
 
@@ -36,7 +37,8 @@
 		<h:outputLabel>link:</h:outputLabel>
 		</td>
 		<td>
-		<h:inputText value="#{dataTable.link}"></h:inputText>
+		<h:inputText id="link" value="#{linkBean.link}" required="true" requiredMessage="Brak Linku"></h:inputText>
+		<h:message for="link" styleClass="validationMsg"></h:message>
 		</td>
 		</tr>
 		<tr>
@@ -44,7 +46,8 @@
 		<h:outputLabel>autor:</h:outputLabel>
 		</td>
 		<td>
-		<h:inputText value="#{dataTable.autor}"></h:inputText>
+		<h:inputText id="autor" value="#{linkBean.autor}" required="true" requiredMessage="Brak wpisu autora"></h:inputText>
+		<h:message for="autor" styleClass="validationMsg"></h:message>
 		</td>
 		</tr>
 		<tr>
@@ -52,20 +55,21 @@
 		<h:outputLabel>opis:</h:outputLabel>
 		</td>
 		<td>
-		<h:inputTextarea cols="30" rows="10" value="#{dataTable.tekst}" style="resize: none"/>
+		<h:inputTextarea id="tekst" cols="30" rows="10" value="#{linkBean.tekst}" required="true" requiredMessage="Brak opisu linku" style="resize: none"/>
+		<h:message for="tekst" styleClass="validationMsg"></h:message>
 		</td>
 		</tr>
 		<tr><td></td><td>
-		<h:commandButton value="Submit" action="#{dataTable.addLink}" type="submit"><br />
+		<h:commandButton value="Submit" action="#{linkBean.insertLinkToDB(linkBean)}" type="submit"><br />
     	</h:commandButton>
+    	<h:button value="Reset" />
     	</td>
 		</tr>
 		</table>
 		
 	</h:form><p />
 	
-	<h:outputLabel>#{dataTable.autor}</h:outputLabel><p />
-	<h:outputLabel>#{dataTable.info}</h:outputLabel>	
+	
 	
 	
 	

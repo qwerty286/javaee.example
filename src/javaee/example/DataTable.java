@@ -1,97 +1,53 @@
 package javaee.example;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
-import javax.faces.bean.ApplicationScoped;
-import javax.faces.bean.ManagedBean;
+
 import javax.faces.context.FacesContext;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+import javaee.example.*;
 
-
-@ManagedBean
-@ApplicationScoped
-public class DataTable {
-	private String link;
-	private String autor;
-	private String tekst;
-	private String info;
-	private List<LinkEntity> linklist = new ArrayList<LinkEntity>();
+public class DataTable { //Klasa Dao
 	
-	{
-	linklist.add(new LinkEntity("www.onet.pl", "rafal", "głupi link"));
-	linklist.add(new LinkEntity("www.pless.pl", "rafal", "głupi link"));
-	}
-	
-	public List<LinkEntity> getLinklist() {
-		return linklist;
-	}
-	public void setLinklist(List<LinkEntity> linklist) {
-		this.linklist = linklist;
-	}
+	private static EntityManager em = Persistence.createEntityManagerFactory("javaee.example").createEntityManager();
+	private static EntityTransaction et = em.getTransaction();
 	
 	
-	public String addLink() throws IOException {
-		if(checkLink() == "true") {
-		LinkEntity linek = new LinkEntity(link, autor, tekst);		
-		linklist.add(linek);
-		//info = autor;
-		FacesContext.getCurrentInstance().getExternalContext().redirect("added.xhtml");
-		clean();
+	public static List getAllLinks() {
+		Query query = em.createQuery("SELECT s FROM LinkEntity s");
+		List links = query.getResultList();
+		if (links != null && links.size() > 0) {           
+	            return links;
+	        } else {
+		        return null;
+	        }
 		}
+	
+	public static String insertIntoDB(String linkx, String autor, String tekst) throws IOException { 
+		if(!et.isActive())
+			et.begin();
+		LinkEntity link = new LinkEntity();
+				
+		link.setId(getminId());
+		link.setAutor(autor);
+		link.setLink(linkx);
+		link.setTekst(tekst);
+		em.persist(link);
+		et.commit();
 		return null;
 	}
 	
-	public void clean() {
-		setLink(null);
-		setAutor(null);
-		setTekst(null);	
-	}
-	
-	public String checkLink()	{
-		String one;
-		if (getLink().isEmpty()) {
-			info = "Brak linku";
-			one = "false";
-		return one;
-		}
-		if (getAutor().isEmpty()) {
-			info = "Brak autora";
-			one = "false";
-		return one;
-		}
+	public static int getminId() {
+		int ext = 1;
+		Query queryObj = em.createQuery("SELECT MAX(s.id)+1 FROM LinkEntity s");
+			        if(queryObj.getSingleResult() != null) {
+			            ext = (Integer) queryObj.getSingleResult();
+			        }
 		
-		
-		
-		one = "true";
-		return one;
+		return ext;
 	}
-	
-	
-	
-	public String getLink() {
-		return link;
-	}
-	public void setLink(String link) {
-		this.link = link;
-	}
-	public String getAutor() {
-		return autor;
-	}
-	public void setAutor(String autor) {
-		this.autor = autor;
-	}
-	public String getTekst() {
-		return tekst;
-	}
-	public void setTekst(String tekst) {
-		this.tekst = tekst;
-	}
-	public String getInfo() {
-		return info;
-	}
-	public void setInfo(String info) {
-		this.info = info;
-	}
-	
 	
 }

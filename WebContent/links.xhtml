@@ -9,6 +9,7 @@
 
 
 <h:head>
+<title>Links</title>
 <link rel="stylesheet" type="text/css" href="style.css" />
 </h:head>
 
@@ -29,13 +30,21 @@
 	
 	<div id="content">
 	
+	<h:form>
+	<h:dataTable binding="#{linki}" var="var" value="#{linkBean.getLinksDB()}">
 
+         
+	        <h:column>
+	                <f:facet name="header">Added links:</f:facet>
+	                <h:outputLink value="http://#{var.link}">#{var.link}</h:outputLink><br />
+	              	<h:link>more...</h:link>   <p />           
+	        </h:column>
+ 
+	</h:dataTable>
+	</h:form>
 	
-	<ui:repeat var="var" value="#{dataTable.linklist}"> 
-           <h:outputLink value="#{var.link}" type="link">#{var.link}</h:outputLink><p />
-           <h:link><h6>more...</h6></h:link><p />
-    </ui:repeat> 
-
+	
+	
 	
 	</div>
 	

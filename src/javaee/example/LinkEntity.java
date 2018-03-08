@@ -1,12 +1,20 @@
 package javaee.example;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-
-public class LinkEntity {
-	
+@Entity
+@Table(name="linki")
+public class LinkEntity { //Klasa encji
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int id;
 	private String link;
 	private String autor;
-	private String text;
+	private String tekst;
 
 	
 	public LinkEntity() {
@@ -16,7 +24,7 @@ public class LinkEntity {
 	public LinkEntity(String link, String autor, String text) {
 		this.link = link;
 		this.autor = autor;
-		this.text = text;		
+		this.tekst = text;		
 	}
 	
 	
@@ -32,11 +40,20 @@ public class LinkEntity {
 	public void setAutor(String autor) {
 		this.autor = autor;
 	}
-	public String getText() {
-		return text;
+	public int getId() {
+		return id;
 	}
-	public void setText(String text) {
-		this.text = text;
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getTekst() {
+		return tekst;
+	}
+
+	public void setTekst(String tekst) {
+		this.tekst = tekst;
 	}
 
 
