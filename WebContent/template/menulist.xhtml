@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<ui:composition>
+<div id="main">
+	<h:outputLabel styleClass="outputLabel">go to:</h:outputLabel>	<p />
+	<h:outputLink value="#{request.contextPath}/start.xhtml">add link</h:outputLink><p />
+	<h:outputLink value="#{request.contextPath}/links.xhtml">show links</h:outputLink><p />
+	<h:outputLink value="#{request.contextPath}/admin.xhtml">admin panel</h:outputLink>
+	</div>
+
+</ui:composition>
+</html>

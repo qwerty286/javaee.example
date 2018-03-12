@@ -1,6 +1,6 @@
 #page {
-	height: 900px;
-	width: 950px;
+	
+	width: 1150px;
 	background-image: url("img/backgg.jpg");
 	background-repeat: repeat;
 	margin: 0 auto;
@@ -9,14 +9,20 @@
     font: 15px arial, sans-serif;
 }
 
+#menulist {
+	float:left;
+	
+	
+}
 
 
-#up {
+
+#header {
 	height:100px;
 	text-align: center;
 	font-size:80px;
 	color: silver;
-	width: 920px;
+	width: 1125px;
 	background-color: #DCDCDC;
 	margin: 0 auto;
 
@@ -40,16 +46,14 @@
 	
 }
 
-#content {
+#cont {
 	padding-left:4px;
 	padding-top:4px;
 	background-color: #DCDCDC;
 	margin-left:235px;
-	width: 695px;
+	width: 890px;
 	height:700px;
 	text-padding:top;
-	
-	
 }
 
 
