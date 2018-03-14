@@ -5,18 +5,8 @@ using mysql client
 
 for adding table:
  
-CREATE DATABASE IF NOT EXISTS \'javaee\' DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+<ul><li>CREATE DATABASE IF NOT EXISTS \'javaee\' DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;</li>
 
-USE \`javaee\`;
+<li>USE \`javaee\`; </li>
 
-CREATE TABLE \`linki\` {
-
-   \`id\` int(11) NOT NULL,
-   
-  \`link` text NOT NULL,
-  
-  \`autor\` text NOT NULL,
-  
-   \`tekst\` text NOT NULL
-   
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+<li>CREATE TABLE \`linki\` {\`id\` int(11) NOT NULL, \`link` text NOT NULL,\`autor\` text NOT NULL, \`tekst\` text NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=latin1;</li></ul>
