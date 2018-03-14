@@ -1,4 +1,4 @@
-# Java EE web page
+# <h6> Java EE web page
 #
 
 # Simple java ee web page with jpa and jsf
