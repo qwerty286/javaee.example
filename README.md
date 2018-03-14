@@ -1,7 +1,6 @@
  
 Java EE web page
 
-
 Simple java ee web page with jpa and jsf
 using mysql client
 for adding table:
