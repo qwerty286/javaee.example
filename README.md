@@ -10,8 +10,13 @@ CREATE DATABASE IF NOT EXISTS \'javaee\' DEFAULT CHARACTER SET latin1 COLLATE la
 USE \`javaee\`;
 
 CREATE TABLE \`linki\` {
+
    \`id\` int(11) NOT NULL,
+   
   \`link` text NOT NULL,
+  
   \`autor\` text NOT NULL,
+  
    \`tekst\` text NOT NULL
+   
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
