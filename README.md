@@ -1,5 +1,5 @@
 Java EE web page
- 
+=============================
 Simple java ee web page with jpa and jsf
 using mySql client
 
