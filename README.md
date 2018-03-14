@@ -1,4 +1,7 @@
-# <h6> Java EE web page
+# 
+.markdown-preview.markdown-preview { p, ul, ol {font-size: 1.2em;} }
+
+Java EE web page
 #
 
 # Simple java ee web page with jpa and jsf
