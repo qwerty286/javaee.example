@@ -5,7 +5,7 @@ using mysql client
 
 for adding table:
  
-CREATE DATABASE IF NOT EXISTS `javaee` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+CREATE DATABASE IF NOT EXISTS "javaee" DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 
 USE `javaee`;
 
