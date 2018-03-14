@@ -1,9 +1,9 @@
 Java EE web page
  
 Simple java ee web page with jpa and jsf
-using mysql client
+using mySql client
 
-for adding table:
+for adding table in mySql:
  
 <ul><li>CREATE DATABASE IF NOT EXISTS 'javaee' DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;</li>
 
