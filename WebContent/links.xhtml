@@ -9,19 +9,27 @@
 
 <ui:composition template="template/szablon.xhtml">
 <ui:define name="content">
-<h:body>
+
 
 	
 	<div id="cont">
 	
 	<h:form>
 	<h:dataTable binding="#{linki}" var="var" value="#{linkBean.getLinksDB()}">
-
-         
 	        <h:column>
-	                <f:facet name="header">Added links:</f:facet>
-	                <h:outputLink value="http://#{var.link}">#{var.link}</h:outputLink><br />
-	              	<h:link>more...</h:link>   <p />           
+	               <f:facet name="header">Added links:</f:facet>
+	                <h:outputLink value="http://#{var.link}">
+	                   		#{var.link}
+	                </h:outputLink>
+	                <br />
+	                	       
+	              	<h:link outcome="aboutlink">
+	              	<f:param name="vars_link" value="#{var.link}" />
+	              	<f:param name="vars_autor" value="#{var.autor}" />
+	              	<f:param name="vars_tekst" value="#{var.tekst}" />
+	              		more... 
+	              	</h:link>   <p />   
+	              	        
 	        </h:column>
  
 	</h:dataTable>
@@ -34,7 +42,7 @@
 	
 	
 	
-</h:body>
+
 </ui:define>
 </ui:composition>
 </html>

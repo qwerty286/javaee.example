@@ -1,8 +1,6 @@
 #page {
 	
 	width: 1150px;
-	background-image: url("img/backgg.jpg");
-	background-repeat: repeat;
 	margin: 0 auto;
  	left: 0;
     right: 0;
@@ -12,20 +10,14 @@
 #menulist {
 	float:left;
 	
-	
 }
 
-
-
 #header {
-	height:100px;
-	text-align: center;
+	height:200px;
+	text-align: left;
 	font-size:80px;
 	color: silver;
-	width: 1125px;
-	background-color: #DCDCDC;
 	margin: 0 auto;
-
  	left: 0;
     right: 0;
 	opacity: 0.6;
@@ -43,15 +35,16 @@
 	width: 190px;
 	background-color: #4BA2EA;
 	float:left;
+
 	
 }
 
 #cont {
 	padding-left:4px;
 	padding-top:4px;
-	background-color: #DCDCDC;
-	margin-left:235px;
-	width: 890px;
+	
+	margin-left:275px;
+	width: 700px;
 	height:700px;
 	text-padding:top;
 }
@@ -60,5 +53,12 @@
 
 .outputLabel {
 	font-size:22px;
+	
+}
+
+.vl {
+    background-color: #4BA2EA;
+    width: auto;
+    height: 3px;
 	
 }

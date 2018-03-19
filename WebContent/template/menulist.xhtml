@@ -7,12 +7,16 @@
 	xmlns:f="http://xmlns.jcp.org/jsf/core">
 
 <ui:composition>
-<div id="main" class="mode"  onmouseover="changeColor()" onmouseout="changeOut()">
-	<h:outputLabel styleClass="outputLabel" >go to:</h:outputLabel>	<p />
-	<h:outputLink value="#{request.contextPath}/start.xhtml">add link</h:outputLink><p />
-	<h:outputLink value="#{request.contextPath}/links.xhtml">show links</h:outputLink><p />
-	<h:outputLink value="#{request.contextPath}/admin.xhtml">admin panel</h:outputLink>
-	</div>
+<div id="main">
+	<table>
+		<tr><td><h:outputLabel styleClass="outputLabel" >go to:</h:outputLabel></td></tr>
+		<tr><td><h:outputLink value="#{request.contextPath}/start.xhtml">add link</h:outputLink></td></tr>
+		<tr><td><h:outputLink value="#{request.contextPath}/links.xhtml">show links</h:outputLink></td></tr>
+		<tr><td><h:outputLink value="#{request.contextPath}/admin.xhtml">admin panel</h:outputLink></td></tr>
+	</table>
+</div>
+
+<script type="text/javascript" src="js/event.js" />
 
 </ui:composition>
 </html>

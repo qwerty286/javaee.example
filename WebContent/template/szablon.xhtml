@@ -10,23 +10,26 @@
 <head>
   <title><ui:insert name="title">Links</ui:insert></title>
   <link rel="stylesheet" type="text/css" href="style.css" />
-  <script type="text/javascript" src="javascript.js" />
+  <script type="text/javascript" src="js/javascript.js" />
 </head>
 
 <body>
 <div id="page">
 
 
-<br />
-<div id="header" onmouseover="noopacity()" onmouseout="opacity()">
+<div id="header">
     <ui:insert name="header">
     	
     	<!--  include your header file or uncomment the include below and create header.xhtml in this directory -->
     	 <ui:include src="/template/header.xhtml"/>
     </ui:insert>
 </div>
-
 <br />
+
+
+<div class="vl"></div>
+<br />
+	<br />
 
 <div id="menulist">
   <ui:insert name="menulist">
@@ -57,6 +60,9 @@
   </ui:insert>
 </div>
 </div>
+
+
+
 </body>
 
 </html>
